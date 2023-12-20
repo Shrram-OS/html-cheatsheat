@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="Шпаргалка по HTML">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ol>
+            <a href="#main"><li><p><strong>Основы</strong></p></a>
+            <ul type="disc">
+            <li>Структура базового документа HTML.</li>
+            <li>Элементы <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>.</li>
+            <li>Использование тегов, атрибутов и значений.</li>
+            </ul>
+            </li>
+            <a href="#text-elements"><li><p><strong>Текстовые элементы</strong></p></a>
+            <ul type="disc">
+            <li>Заголовки <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>.</li>
+            <li>Параграфы <code>&lt;p&gt;</code>.</li>
+            <li>Отступы и переносы строк.</li>
+            <li>Выделение текста: <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;mark&gt;</code>, <code>&lt;del&gt;</code> и др.</li>
+            </ul>
+            </li>
+            <a href="#links-media"><li><p><strong>Ссылки и медиа</strong></p></a>
+            <ul type="disc">
+            <li>Гиперссылки <code>&lt;a&gt;</code>.</li>
+            <li>Вставка изображений <code>&lt;img&gt;</code>.</li>
+            <li>Видео и аудио в HTML5.</li>
+            </ul>
+            </li>
+            <a href="#lists"><li><p><strong>Списки</strong></p></a>
+            <ul type="disc">
+            <li>Нумерованные <code>&lt;ol&gt;</code> и маркированные <code>&lt;ul&gt;</code> списки.</li>
+            <li>Списки определений <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code> и <code>&lt;dd&gt;</code>.</li>
+            </ul>
+            </li>
+            <a href="#tables"><li><p><strong>Таблицы</strong></p></a>
+            <ul type="disc">
+            <li>Создание таблиц с помощью <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code> и других элементов.</li>
+            <li>Комбинирование ячеек и объединение строк и столбцов.</li>
+            </ul>
+            </li>
+            <a href="#forms"><li><p><strong>Формы</strong></p></a>
+            <ul type="disc">
+            <li>Создание форм для ввода данных с помощью <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code> и др.</li>
+            <li>Различные типы полей ввода, такие как текстовые поля, кнопки, флажки, переключатели и т.д.</li>
+            <li>Валидация форм.</li>
+            </ul>
+            </li>
+            <a href="#blocks-container"><li><p><strong>Блоки и контейнеры</strong></p></a>
+            <ul type="disc">
+            <li>Группировка элементов с помощью <code>&lt;div&gt;</code> и <code>&lt;span&gt;</code>.</li>
+            <li>Семантические блочные элементы: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code> и т.д.</li>
+            </ul>
+            </li>
+            <a href="#meta"><li><p><strong>Метаданные и настройки</strong></p></a>
+            <ul type="disc">
+            <li>Метатеги <code>&lt;meta&gt;</code> для указания информации о документе (кодировка, описание, ключевые слова и т.д.).</li>
+            <li>Заголовки страницы <code>&lt;title&gt;</code>.</li>
+            <li>Комментарии <code>&lt;!-- --&gt;</code>.</li>
+            </ul>
+            </li>
+            <a href="#semantic"><li><p><strong>Семантика</strong></p></a>
+            <ul type="disc">
+            <li>Использование семантических тегов для повышения доступности и SEO (например, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;aside&gt;</code> и т.д.).</li>
+            </ul>
+            </li>
+            
+    </div>
+    <br><br>
+    <hr>
+    <div>
+        <a name="main">Основы HTML</a>
+        <ul type="disc" >
+            <li><code>&lt;!DOCTYPE html&gt;</code> - одинарный тег для указание версии html</li>
+            <li><code>&lt;html&gt;</code> - основной тег</li>
+            <li><code>&lt;head&gt;</code>- тег для скрытой информации (настройки). Возможные теги для тега <code>&lt;head&gt;</code>:<ul type="disc">
+            <li><code>&lt;title&gt;</code> и <code>&lt;/title&gt;</code> - при помощи этого тега можно описать какое название будет у конкретной определённой страницы</li>
+            <li><code>&lt;meta&gt;</code> - одинарный тег для <a href="#meta">метаданных</a>. </li>
+            <li><code>&lt;link&gt;</code> - одинарный тег для указания отношения между текущим документом и связанным документом/ресурсом.</li>
+            <li>Возможные атрибуты для тега <code>&lt;link&gt;</code>:<ul type="disc">
+            <li><code>rel</code> - атрибут который определяет отношения между текущим документом и связанным документом/ресурсом.</li>
+            <li>Возможные значение которые может принимать атрибут <code>rel</code>:<ul type="disc">
+            <li><code>stylesheet</code> - значение для указания использования таблиц стилей</li>
+            <li></li>
+            </ul>
+            </li>
+            <li><code>href</code> - путь до файла<ul type="disc">
+            <li><code>&lt;script&gt;</code> - тег для подключения JavaScript </li>
+            <li>Возможные атрибуты для тега <code>&lt;script&gt;</code>:</li>
+            <li><code>src</code> - путь до файла </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            <li><code>&lt;body&gt;</code> - тег в котором все теги будут видны конечному пользователю</li>
+            <li><code>&lt;!-- Комментарий --&gt;</code> - комментарий</li>
+            <li><strong>Порядок закрытия тегов</strong> - при использовании нескольких тегов для одного элемента. Нужно отделять теги и закрывать вложенный тег, а потом закрыть &quot;родительский тег&quot;. Пример: <code>&lt;p&gt;Просто &lt;b&gt;текст&lt;/b&gt;&lt;/p&gt;</code>  Тут будет выглядеть как: Просто <strong>текст</strong> </li>
+            <li>Атрибуты применяемые ко всем тегам:<ul type="disc">
+            <li><code>title</code> - всплывающая подсказка при наведении на элемент</li>
+            <li><code>width</code> - ширина  элемента в пикселях<ul type="disc">
+            <li><code>height</code> - высота элемента в пикселях</li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            
+    </div>
+    <hr>
+    <div>
+        <a name="text-elements">Текстовые елементи</a>
+        <ul type="disc">
+            <li><code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> - теги для заголовков (heading)</li>
+            <li><code>&lt;p&gt;</code> - тег для параграфов (paragraph)</li>
+            <li><code>&lt;b&gt;</code> - тег для жирного шрифта (bold)</li>
+            <li><code>&lt;strong&gt;</code> - тег для выделения текста (делает его жирным)</li>
+            <li><code>&lt;i&gt;</code> - тег для курсивного текста (italic)</li>
+            <li><code>&lt;em&gt;</code> - тег для текста с акцентом или эмфазисом (делает его курсивным)</li>
+            <li><code>&lt;strike&gt;</code> - тег для зачёркнутого текста </li>
+            <li><code>&lt;sub&gt;</code> -  subscript</li>
+            <li><code>&lt;sup&gt;</code> - superscript</li>
+            <li><code>&lt;br&gt;</code> - одинарный тег &quot;заглушка&quot;. Используется для переноса строки (break row)</li>
+            <li><code>&lt;hr&gt;</code> - одинарный тег для горизонтальной линии (horizontal row)</li>
+            <li><code>&lt;abbr&gt;</code> - тег для аббревиатуры (abbreviation), с атрибутом <code>title</code> для расшифровки.</li>
+            <li><code>&lt;address&gt;</code> - тег для указания адреса (делает его курсивным)</li>
+            <li><code>&lt;big&gt;</code> - тег для увеличения текста </li>
+            <li><code>&lt;small&gt;</code> - тег для уменьшения текста</li>
+            <li><code>&lt;pre&gt;</code> - тег для предварительно отформатированного текста, сохраняющего пробелы и переносы строк (делает текст моноширинным)</li>
+            <li><code>&lt;code&gt;</code> - тег для обозначения фрагментов кода. (делает текст моноширинным)</li>
+            <li>Возможные атрибуты для текстовых тегов:<ul type="disc">
+            <li><code>title</code> - текст появляющийся при наведении на текст внутри тега. (Часто используется для расшифровки аббревиатур)</li>
+            </ul>
+            </li>
+            </ul>
+    </div>
+    <hr>
+    <div>
+        <a name="links-media">Ссылки и медиа</a>
+        <ul type="disc">
+            <li><p>Ссылки</p>
+            <ul type="disc">
+            <li><code>&lt;a&gt;</code> - тег для создания ссылки для текста<ul type="disc">
+            <li>Возможные атрибуты для тега <code>&lt;a&gt;</code>:    <ul type="disc">
+            <li><code>name</code> - атрибут для создания якорных ссылок, чтобы переходить к определенному элементу на странице</li>
+            <li><code>target</code> - атрибут для указания метода открытия ссылки. Возможные значения атрибута <code>target</code>:<ul type="disc">
+            <li><code>_self</code> - значение по умолчанию, открывает ссылку на той же вкладке</li>
+            <li><code>_blank</code> - открывает ссылку в новой вкладке</li>
+            <li><code>_parent</code> - открывает ссылку в родительском фрейме, если такой есть.</li>
+            </ul>
+            </li>
+            <li><code>href</code> - атрибут для указания адреса, куда будет производиться переход при клике на ссылку. Возможные значения:<ul type="disc">
+            <li>URL адрес</li>
+            <li>Путь к html файлу в текущей директории</li>
+            <li><code>#&lt;Имя&gt;</code> - создание ссылки &quot;якоря&quot; при нажатии на которую выполнится перенос на выбранный элемент (используя атрибут <code>name</code> для ссылки).</li>
+            <li><code>mailto:&lt;Почта&gt;</code> - перенаправление на почтовый клиент для написания письма на указанную почту</li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            <li><p>Медиа</p>
+            <ul type="disc">
+            <li><code>&lt;img&gt;</code> - одинарный тег для изображений (image). Используется для встраивания изображений на веб-страницу
+              Возможные атрибуты для тега <code>&lt;img&gt;</code>:<ul type="disc">
+            <li><code>src</code> - атрибут для указания изображения (source). Возможные значения для атрибута <code>src</code>:<ul type="disc">
+            <li>URL адрес изображения.</li>
+            <li>Путь к файлу изображения в текущей директории.</li>
+            </ul>
+            </li>
+            <li><code>width</code> и <code>height</code> - атрибуты для указания ширины и высоты изображения соответственно. Рекомендуется указывать оба атрибута для сохранения пропорций изображения. Возможные значения для атрибутов <code>width</code> и <code>height</code>:<ul type="disc">
+            <li><code>auto</code> - автоматическое указание значения</li>
+            <li><code>&lt;Значение&gt;%</code> - для указания значения в процентах</li>
+            <li><code>&lt;Значение&gt;px</code> - для указания значения в пикселях</li>
+            </ul>
+            </li>
+            <li><code>alt</code> - атрибут для указания текста, который будет отображен, если изображение не загрузилось, а также для улучшения доступности (alternative)</li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+    </div>
+    <hr>
+    <div>
+        <a name="lists">Списки</a>
+        <ul type="disc">
+            <li><code>&lt;ol&gt;</code> - тег для нумерованного списка (ordered list). Возможные атрибуты для тега <code>&lt;ol&gt;</code>:<ul type="disc">
+            <li><code>start</code> - для указания начала нумерации списка</li>
+            <li><code>type</code> - для указания маркеров списка. В качестве маркеров могут быть следующие значения:<ul type="disc">
+            <li><code>A</code> - заглавные латинские буквы</li>
+            <li><code>a</code> - строчные латинские буквы</li>
+            <li><code>I</code> - заглавные римские цифры</li>
+            <li><code>i</code> - строчные римские цифры</li>
+            <li><code>1</code> - арабские цифры</li>
+            </ul>
+            </li>
+            <li><code>reversed</code> - для нумерации списка в обратном порядке </li>
+            </ul>
+            </li>
+            <li><code>&lt;ul&gt;</code> - тег для не нумерованного списка (unordered list). Возможные атрибуты для тега <code>&lt;ul&gt;</code>:<ul type="disc">
+            <li><code>type</code> - для указания маркеров списка. В качестве маркеров могут быть следующие значения:<ul type="disc">
+            <li><code>disc</code> - кружок</li>
+            <li><code>circle</code> - окружность</li>
+            <li><code>square</code> - квадрат</li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            <li><code>&lt;li&gt;</code> - тег для указания элемента списка (list item)</li>
+            </ul>
+    </div>
+    <hr>
+    <div>
+        <a name="tables">Таблицы</a>
+        <ul type="disc">
+            <li><code>&lt;table&gt;</code> - тег для таблиц.
+              Возможные вложенные теги для тега <code>&lt;table&gt;</code>:<ul type="disc">
+            <li><code>&lt;thead&gt;</code> - тег для указания шапки таблицы (table head).</li>
+            <li><code>&lt;tfoot&gt;</code> - тег для указания футера таблицы (table foot).</li>
+            <li><code>&lt;tbody&gt;</code> - тег для указания тела таблицы (table body).
+            Возможные вложенные теги для тегов <code>&lt;thead&gt;</code>, <code>&lt;tfoot&gt;</code> и <code>&lt;tbody&gt;</code>:</li>
+            <li><code>&lt;tr&gt;</code> - тег для указания ряда таблицы (table row).
+            Возможные вложенные теги для тега <code>&lt;tr&gt;</code>:</li>
+            <li><code>&lt;th&gt;</code> - тег для указания ячейки-заголовка таблицы (table header cell).</li>
+            <li><code>&lt;td&gt;</code> - тег для указания элемента (ячейки) таблицы (table data cell).
+            Возможные атрибуты для тегов <code>&lt;th&gt;</code> и <code>&lt;td&gt;</code>:</li>
+            </ul>
+            </li>
+            <li><p><code>align</code> - атрибут для указания горизонтального выравнивания текста в ячейке.
+              Возможные значения для атрибута <code>align</code>:</p>
+            <ul type="disc">
+            <li><code>left</code> - выравнивание содержимого слева ячейки.</li>
+            <li><code>center</code> - центрирование контента в ячейке.</li>
+            <li><code>right</code> - выравнивание контента справа ячейки.</li>
+            <li><p><code>justify</code> - вставляет пробелы в текстовое содержимое ячейки, чтобы содержимое заняло ячейку.</p>
+            <p>Атрибут <code>border</code> и его использование лучше заменить на стилизацию с помощью CSS.</p>
+            </li>
+            </ul>
+            </li>
+            </ul>
+    </div>
+    <hr>
+    <div>
+        <a name="forms">Формы</a>
+        <ul type="disc">
+            <li><code>&lt;form&gt;</code> - тег для создания формы</li>
+            <li>Возможные и <strong>обязательные</strong> атрибуты для тега <code>&lt;form&gt;</code>:<ul type="disc">
+            <li><code>action</code> - атрибут для указания страницы обработки данных формы </li>
+            <li><code>method</code> - атрибут для указания HTTP метода передачи данных формы</li>
+            </ul>
+            </li>
+            <li>Возможные вложенные теги для тега <code>&lt;form&gt;</code>:<ul type="disc">
+            <li><code>&lt;label&gt;</code> - тег для указания подписи нижнего поля</li>
+            <li>Возможные атрибуты для тега <code>label</code>:<ul type="disc">
+            <li><code>for</code> - атрибут для указания объекта с которым работает подпись внутри тега</li>
+            </ul>
+            </li>
+            <li><code>&lt;textarea&gt;</code> - тег для ввода текста (поддерживающий все атрибуты тега <code>&lt;input&gt;</code> за исключением атрибута <code>type</code>, <code>value</code>)</li>
+            <li>Возможные атрибуты для тега <code>&lt;textarea&gt;</code>:<ul type="disc">
+            <li><code>cols</code> - атрибут для указания ширины поля ввода</li>
+            <li><code>rows</code> - атрибут для указания высоты поля ввода</li>
+            </ul>
+            </li>
+            <li><code>&lt;input&gt;</code> - одинарный тег для создания поля для ввода информации </li>
+            <li>Возможные атрибуты для тега <code>&lt;input&gt;</code>:<ul type="disc">
+            <li><code>type</code> - атрибут для указания типа поля (стоит учитывать что не все браузеры поддерживают все типы полей)</li>
+            <li>Возможные значения атрибута <code>type</code>:<ul type="disc">
+            <li><code>text</code> - для ввода текста</li>
+            <li><code>password</code> -для ввода пароля (текст при вводе будет скрыт)</li>
+            <li><code>email</code> - для ввода почты </li>
+            <li><code>url</code> - для ввода url адреса</li>
+            <li><code>color</code> - для выбора цвета </li>
+            <li><code>data</code> - для ввода даты</li>
+            <li><code>time</code> - для ввода времени</li>
+            <li><code>datetime</code> - для ввода даты с временем</li>
+            <li><code>checkbox</code> - для установки галочки</li>
+            <li><code>radio</code> - для установки радио кнопки (кружочка) (для указания того что несколько радио полей (кружочков) используется для одного поля (ограничить максимально допустимое количество выборов), требуется указывать атрибут <code>name</code>)</li>
+            <li><code>file</code> - для выбора файла </li>
+            <li><code>button</code> - для создания кнопки</li>
+            <li><code>submit</code> - для создания кнопки после нажатия на которую произойдёт отправка на сервер</li>
+            <li><code>reset</code> - для очистки всех полей в форме</li>
+            </ul>
+            </li>
+            <li><code>placeholder</code> - атрибут для указания подсказки для поля</li>
+            <li><code>value</code> - атрибут для установки (значения по умолчанию) какого либо текста внутри поля </li>
+            <li><code>maxlenght</code> - атрибут для указания максимального количества символов для ввода</li>
+            <li><code>hidden</code> - атрибут не принимающий какие либо значения для скрытия поля ввода</li>
+            <li><code>disabled</code> - атрибут не принимающий какие либо значения для деактивации поля ввода</li>
+            <li><code>readonly</code> - атрибут не принимающий какие либо значения для указания состояния поля ввода только для чтения</li>
+            <li><code>name</code> - атрибут для указания имени поля ввода</li>
+            <li><code>required</code> - атрибут для указания того что поля является обязательным</li>
+            </ul>
+            </li>
+            <li><code>&lt;select&gt;</code> - тег для создания выпадающего списка</li>
+            <li>Возможные атрибуты для тега <code>&lt;select&gt;</code>:<ul type="disc">
+            <li><code>multiple</code> - атрибут не принимающий какие либо значения для указания того что есть возможность сделать несколько выборов </li>
+            <li><code>size</code> - атрибут для указания размера количества показываемых вариантов</li>
+            </ul>
+            </li>
+            <li>Возможные вложенные теги для тега <code>&lt;select&gt;</code>:<ul type="disc">
+            <li><code>&lt;option&gt;</code> - тег для указания варианта выбора для выпадающего списка</li>
+            <li>Возможные атрибуты для тега <code>&lt;option&gt;</code>:</li>
+            <li><code>selected</code> - атрибут не принимающий какие либо значения для указания значения по умолчанию</li>
+            <li><code>disabled</code> - атрибут не принимающий какие либо значения для деактивации варианта</li>
+            <li></li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            <li><code>id</code> - атрибут для указания уникального идентификатора <strong>ЛЮБОГО объекта</strong></li>
+            <li><code>&lt;button&gt;</code> - тег для создания кнопки </li>
+            <li>Возможные атрибуты для тега <code>&lt;button&gt;</code><ul type="disc">
+            <li><code>type</code> - атрибут для указания типа кнопки</li>
+            <li>Возможные значения атрибута <code>type</code>:<ul type="disc">
+            <li><code>button</code> - для создания обычной кнопки</li>
+            <li><code>submit</code> - для создания кнопки отправляющей данные из формы на сервер (для завершения формы)</li>
+            <li><code>reset</code> - для создания кнопки очистки всех полей в форме </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            <li><code>&lt;progress&gt;</code> - тег прогресса (без указания атрибутов он может выступать в роли тега загрузки). Браузера не поддерживающие данный тег будут отображать содержимый текст</li>
+            <li>Возможные атрибуты для тега <code>&lt;progress&gt;</code>:<ul type="disc">
+            <li><code>max</code> - атрибут для указания максимального значения </li>
+            <li><code>value</code> - атрибут для указания значения прогресса</li>
+            </ul>
+            </li>
+            </ul>            
+    </div>
+    <hr>
+    <div>
+        <a name="blocks-container">Блоки и контейнеры</a>
+        <ul type="disc">
+            <li><p><code>&lt;div&gt;</code> - блочный тег, используемый для группировки элементов и создания блочных контейнеров на веб-странице. Он позволяет создавать отдельные секции и применять к ним стили через CSS.</p>
+            </li>
+            <li><p><code>&lt;span&gt;</code> - строчный тег, используемый для выделения конкретных частей текста или вложения внутрь других элементов. Он также позволяет применять стили через CSS и является важным инструментом для изменения стиля или взаимодействия с текстом на странице.</p>
+            </li>
+            </ul>            
+    </div>
+    <hr>
+    <div>
+        <a name="meta">Метаданные и настройки</a>
+        <p>Метаданные - это различные настройки которые можно установить к какой-то конкретной странице. Возможные атрибуты для одинарного тега <code>&lt;meta&gt;</code>:</p>
+        <ul type="disc">
+        <li><code>charset</code> - Установка кодировки</li>
+        <li><code>name</code> - атрибут тега. Значение которого указывается в атрибуте <code>content</code> Возможные описания атрибута <code>name</code>:<ul type="disc">
+        <li><code>author</code> - имя автора</li>
+        <li><code>description</code> - описание страницы</li>
+        <li><code>keywords</code> - ключевые слова для страницы</li>
+        </ul>
+        </li>
+        <li><code>content</code> - для описания контента на странице</li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <a name="semantic">Семантика</a>
+        <ul type="disc">
+            <li><code>&lt;header&gt;</code> - блочный тег для шапки сайта</li>
+            <li><code>&lt;main&gt;</code> - блочный тег для основной части сайта</li>
+            <li><code>&lt;aside&gt;</code> - блочной тег для боковой части сайта </li>
+            <li><code>&lt;footer&gt;</code> - блочный тег для футера сайта</li>
+            <li><code>&lt;details&gt;</code> - тег для скрытого текста который будет показываться лишь при нажатии на выпадающий список</li>
+            <li>Вложенные теги для тега <code>&lt;details&gt;</code>:<ul type="disc">
+            <li><code>&lt;summary&gt;</code> - тег для создания кнопки для разкрития списка</li>
+            </ul>
+            </li>
+            </ul>            
+    </div>
+</body>
+</html>
